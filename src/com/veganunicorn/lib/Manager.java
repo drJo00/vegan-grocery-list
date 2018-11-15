@@ -13,11 +13,11 @@ public class Manager {
         lists.remove(list);
     }
 
-    // не работает
+    // должно работать
     public void insertElement (int n1, int n2) {
         List tmp = lists.get(n1);
         if (n1 > n2) {
-            for (int i = n2 + 1; i <= n1; i++) {
+            for (int i = n1; i < n2; i--) {
                 lists.set(i, lists.get(i - 1));
             }
             lists.set(n2, tmp);
