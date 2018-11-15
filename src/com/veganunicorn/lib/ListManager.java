@@ -35,11 +35,11 @@ public class ListManager {
     }
 
     // n1 номер элемента, n2 позиция куда перемещать
-    // не работает
+    // ндолжно работать
     public void insertElement (int n1, int n2){
         ListElement tmp = list.getArrayOfElements().get(n1);
         if (n1 > n2) {
-            for (int i = n2 + 1; i <= n1; i++) {
+            for (int i = n1; i < n2; i--) {
                 list.getArrayOfElements().set(i, list.getArrayOfElements().get(i - 1));
             }
             list.getArrayOfElements().set(n2, tmp);
